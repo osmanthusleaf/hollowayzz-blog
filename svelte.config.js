@@ -3,6 +3,7 @@ import adapter from '@sveltejs/adapter-static';
 import fs from 'fs';
 import * as path from 'path';
 import preprocess from 'svelte-preprocess';
+import adapter from '@sveltejs/adapter-netlify'
 
 const files = ['./post', './pages'].flatMap((dir) => fs.readdirSync(dir, { withFileTypes: false }));
 const stripMDSuffix = (s) => `/${s.replace('.md', '')}`;
@@ -41,5 +42,3 @@ const config = {
 		// target: '#svelte'
 	}
 };
-
-export default config;

@@ -1,0 +1,110 @@
+@import "prismjs/themes/prism-dark.min.css";
+@import "bulma/css/bulma.min.css";
+
+
+@function text($bg) {
+  @if (lightness($bg) > 50) {
+    @return #000;
+  } @else {
+    @return #FFF;
+  }
+}
+
+@mixin oss-background-color-tag($name, $color) {
+  .tag.ossc.#{$name} {
+    background-color: $color;
+    color: text($color);
+
+    &.inactive {
+      opacity: .5;
+    }
+  }
+}
+
+$colors: (
+        bulma: #04d1b2,
+        Svelte: #ff3e00,
+        sveltekit: #3fb3ff,
+        TypeScript: #3077c6,
+        supabase: #d2f9f5,
+        markdown: #2ea1e2,
+        JAMstack: #d1036f,
+        Forestry: #19a877,
+        tina: #d2f9f5,
+        graphql: #df0298,
+        JavaScript: #5d3b97
+);
+
+@each $name, $color in $colors {
+  @include oss-background-color-tag($name, $color)
+}
+
+
+
+// Fonts
+@font-face {
+  font-family: 'Roboto Serif', sans-serif;
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Serif&display=swap');
+}
+
+@font-face {
+  font-family: 'Fahkwang', sans-serif;
+  @import url('https://fonts.googleapis.com/css2?family=Fahkwang&display=swap');
+}
+
+h1, h2, h3, a, ul {
+  font-family: 'Fahkwang', sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+a {
+  color: map-get($colors, "supabase");
+  text-decoration: none;
+
+
+}
+
+code {
+  font-family: 'Roboto Serif', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 2.75rem;
+  color: black;
+  padding: 2.75rem 2.75rem;
+}
+
+h2 {
+  font-size: 26px;
+  color: #444;
+}
+
+h3 {
+  font-size: 22px;
+  color: #222;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+p, ul {
+  font-family: 'Roboto Serif', sans-serif;
+  font-size: 18px;
+  color: #444;
+
+  &.info {
+    font-size: 14px;
+    margin-top: 0;
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+
+  &.is-hovered {
+    color: white;
+  }
+}

@@ -1,0 +1,1 @@
+export const title = "Jonathan Miller || Hollowayzz";

@@ -1,0 +1,1 @@
+type TagPostMap = Map<string, Post[]>;

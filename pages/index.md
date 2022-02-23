@@ -4,7 +4,7 @@ tags: tag1
 date: 2022-02-17
 excerpt: A space to host notes, research, and things of interest
 ---
-# Jon Miller || Educator and Software Engineer
+# Jon Miller || Educator, Researcher, and Software Engineer
 
 ---
 ## I make websites. This is a blog where I document new tools and ideas that I use and think about.
@@ -22,5 +22,6 @@ As I grow as a software engineer, please check back for new and exciting tools.
 - [x] Bulma
 - [ ] Forestry.io integration
 - [ ] Supabase
+- [ ] Netlify
 
 
